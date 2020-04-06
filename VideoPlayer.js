@@ -1294,13 +1294,13 @@ const styles = {
             width: 150,
         },
         track: {
-            backgroundColor: '#333',
-            height: 1,
+            backgroundColor: '#FFF',
+            height: 4,
             marginLeft: 7,
         },
         fill: {
             backgroundColor: '#FFF',
-            height: 1,
+            height: 4,
         },
         handle: {
             position: 'absolute',
@@ -1333,16 +1333,16 @@ const styles = {
         },
         handle: {
             position: 'absolute',
-            marginLeft: -7,
+            marginLeft: -8,
             height: 28,
             width: 28,
         },
         circle: {
-            borderRadius: 12,
+            borderRadius: 16,
             position: 'relative',
             top: 8, left: 8,
-            height: 12,
-            width: 12,
+            height: 16,
+            width: 16,
         },
     })
 };
