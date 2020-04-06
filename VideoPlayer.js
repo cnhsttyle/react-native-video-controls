@@ -490,7 +490,7 @@ export default class VideoPlayer extends Component {
     calculateTime() {
         if ( this.state.showTimeRemaining ) {
             const time = this.state.duration - this.state.currentTime;
-            return `-${ this.formatTime( time ) }`;
+            return `${ this.formatTime( time ) }`;
         }
 
         return this.formatTime( this.state.currentTime );
@@ -526,7 +526,7 @@ export default class VideoPlayer extends Component {
         let state = this.state;
         position = this.constrainToSeekerMinMax( position );
 
-        state.seekerFillWidth = position;
+        state.seekerFillWidth = position + 8;
         state.seekerPosition = position;
 
         if ( ! state.seeking ) {
@@ -999,7 +999,7 @@ export default class VideoPlayer extends Component {
                         }
                     ]}/>
                 </View>
-                <View
+                {/* <View
                     style={[
                         styles.seekbar.handle,
                         { left: this.state.seekerPosition }
@@ -1010,7 +1010,7 @@ export default class VideoPlayer extends Component {
                         styles.seekbar.circle,
                         { backgroundColor: this.props.seekColor || '#FFF' } ]}
                     />
-                </View>
+                </View> */}
             </View>
         );
     }
@@ -1333,7 +1333,7 @@ const styles = {
         },
         handle: {
             position: 'absolute',
-            marginLeft: -8,
+            marginLeft: -5,
             height: 28,
             width: 28,
         },
