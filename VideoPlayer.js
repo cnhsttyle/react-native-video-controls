@@ -666,7 +666,7 @@ export default class VideoPlayer extends Component {
      * Before mounting, init our seekbar and volume bar
      * pan responders.
      */
-    UNSAFE_componentWillMount() {
+    componentWillMount() {
         this.initSeekPanResponder();
         this.initVolumePanResponder();
     }
@@ -675,7 +675,7 @@ export default class VideoPlayer extends Component {
      * To allow basic playback management from the outside
      * we have to handle possible props changes to state changes
      */
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps) {
         if (this.state.paused !== nextProps.paused ) {
             this.setState({
                 paused: nextProps.paused
@@ -1294,13 +1294,13 @@ const styles = {
             width: 150,
         },
         track: {
-            backgroundColor: '#FFF',
-            height: 4,
+            backgroundColor: '#333',
+            height: 1,
             marginLeft: 7,
         },
         fill: {
             backgroundColor: '#FFF',
-            height: 4,
+            height: 1,
         },
         handle: {
             position: 'absolute',
@@ -1320,15 +1320,15 @@ const styles = {
             marginRight: 20
         },
         track: {
-            backgroundColor: '#333',
-            height: 1,
+            backgroundColor: '#FFF',
+            height: 4,
             position: 'relative',
             top: 14,
             width: '100%'
         },
         fill: {
             backgroundColor: '#FFF',
-            height: 1,
+            height: 4,
             width: '100%'
         },
         handle: {
